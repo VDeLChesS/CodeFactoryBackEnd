@@ -1,0 +1,3 @@
+SELECT COUNT(*) AS "first_name_Mark"
+FROM employees
+WHERE first_name = "Mark"

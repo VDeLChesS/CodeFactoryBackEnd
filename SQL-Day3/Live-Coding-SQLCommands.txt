@@ -1,0 +1,27 @@
+
+SELECT * FROM Customers c
+WHERE NOT EXISTS (SELECT 1 FROM Orders WHERE
+                 customer_id = c.customer_id)
+
+
+
+
+SELECT MAX(amount_spent) max, MIN(amount_spent) min, AVG(amount_spent) avg
+FROM (SELECT customer_id, SUM(amount) as amount_spent 
+      FROM Orders
+      GROUP BY customer_id)
+      
+
+
+SELECT customer_id, SUM(amount) amount_spent
+	FROM Orders
+    GROUP BY customer_id
+
+
+
+SELECT c.* FROM Customers c
+JOIN (SELECT country, AVG(age) avg_age
+     FROM Customers c1
+     Group BY country)
+     c1 ON c.country = c1.country
+     WHERE c.age > c1.avg_age
