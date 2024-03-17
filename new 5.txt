@@ -1,0 +1,28 @@
+LIKE Operator
+
+Description
+
+WHERE CustomerName LIKE 'e%'
+
+Finds any values that start with an "e"
+
+WHERE CustomerName LIKE '%n'
+
+Finds any values that end with an "n"
+
+WHERE CustomerName LIKE '%lo%'
+
+Finds any values that have "lo" as part of them
+
+WHERE CustomerName LIKE '_l%'
+
+Finds any values that have "l" in the second position
+
+WHERE CustomerName LIKE 'e_%_%'
+
+Finds any values that start with an "e" and are at least 3 characters in length
+
+WHERE CustomerName LIKE 'a%o'
+
+Finds any values that start with an "a" and ends with "o"
+

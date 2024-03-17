@@ -1,0 +1,56 @@
+Consider the structure of the following two tables.
+
+
+DOGS Table:
+
+CREATE TABLE DOGS(
+ID INT NOT NULL AUTO_INCREMENT,
+NAME VARCHAR (30) NOT NULL,
+AGE INT NOT NULL,
+BREED VARCHAR (35),
+PRICE DECIMAL (20, 2),
+PRIMARY KEY (ID)
+);
+
+
+SALE Table
+
+CREATE TABLE `SALES` (
+ID INT NOT NULL AUTO_INCREMENT,
+DATE DATETIME,
+NEW_OWNER_ID INT,
+AMOUNT DECIMAL (20, 2),
+PRIMARY KEY (ID),
+FOREIGN KEY (NEW_OWNER_ID) REFERENCES DOGS(ID)
+);
+
+
+AUTO_INCREMENT will automatically increase the id number by 1 when a new record is created (Note: only one column in a table can use AUTO_INCREMENT).
+
+
+FOREIGN KEY(NEW_OWNER_ID) refers to the name of the column in the SALES table.
+
+REFERENCES DOGS(ID) references to the name of the id in the DOGS table.
+
+
+
+
+ON DELETE CASCADE
+This referential action allows us to delete data from child/connecting tables automatically when deleting the table from the parent table.
+
+
+We add this action when setting up the foreign key:
+
+
+ON UPDATE CASCADE
+This referential action allows us to update data from child/connecting tables automatically when updating the table from the parent table.
+
+INSERT INTO Statement
+Using this statement, we can add new rows onto an existing table of a database. This can be achieved in two different ways:
+
+Using the DISTINCT keyword, we can prevent our SELECT statement from fetching duplicates of database entries, thereby optimizing its processing speed.
+
+The WHERE clause is used as a conditional, making sure that only if the defined condition is evaluated as true the relevant values will be returned from the table.
+
+
+This can be used to filter, for example which records you wish to update, delete or otherwise use.

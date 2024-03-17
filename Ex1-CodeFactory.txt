@@ -1,0 +1,94 @@
+Tables:
+Authors:
+
+Author_ID (Primary Key)
+Author_Name
+Author_Birth_Date
+Author_Death_Date (nullable)
+Genres:
+
+Genre_ID (Primary Key)
+Genre_Name
+Books:
+
+Book_ID (Primary Key)
+Title
+Author_ID (Foreign Key to Authors)
+Genre_ID (Foreign Key to Genres)
+Publisher
+Publication_Date
+ISBN
+Description
+Purchase_Date
+Purchase_Price
+Condition
+Current_Location
+Rating
+Status (e.g., Owned, Borrowed, Wishlist)
+Readings:
+
+Reading_ID (Primary Key)
+Book_ID (Foreign Key to Books)
+Start_Date
+End_Date
+Reading_Status (e.g., In Progress, Completed)
+Relationships:
+One-to-Many relationship between Authors and Books (One author can have multiple books)
+One-to-Many relationship between Genres and Books (One genre can have multiple books)
+One-to-Many relationship between Books and Readings (One book can have multiple readings)
+
++------------+        +------------+         +------------+
+|   Authors  |        |   Genres   |         |   Books    |
++------------+        +------------+         +------------+
+| Author_ID  |<------o| Genre_ID   |<------o| Book_ID    |
+| Author_Name|        | Genre_Name |         | Title      |
+| Birth_Date |        +------------+         | Publisher  |
+| Death_Date |                                | Pub_Date   |
++------------+                                | ISBN       |
+                                              | Description|
+                                              | Purchase_Date|
+                                              | Purchase_Price|
+                                              | Condition  |
+                                              | Location   |
+                                              | Rating     |
+                                              | Status     |
+                                              +------------+
++------------+         +------------+
+|  Readings  |         |    Users   |
++------------+         +------------+
+| Reading_ID |         | User_ID    |
+| Book_ID    |         | Username   |
+| Start_Date |         | Password   |
+| End_Date   |         +------------+
+| Status     |
++------------+
+
+
+
+
+
+
+
+UML
+
+
+
+
++--------------+          +-------------+          +------------+
+|    Authors   |          |   Genres    |          |   Books    |
++--------------+          +-------------+          +------------+
+| - Author_ID  |          | - Genre_ID  |          | - Book_ID  |
+| - Author_Name|          | - Genre_Name|          | - Title    |
+| - Birth_Date |          +-------------+          | - Publisher|
+| - Death_Date |                                    | - Pub_Date |
++--------------+                                    | - ISBN    |
+                                                    | - Description|
++--------------+                                    | - Purchase_Date|
+|  Readings    |                                    | - Purchase_Price|
++--------------+                                    | - Condition |
+| - Reading_ID |                                    | - Location  |
+| - Book_ID    |                                    | - Rating    |
+| - Start_Date |                                    | - Status    |
+| - End_Date   |
+| - Status     |
++--------------+

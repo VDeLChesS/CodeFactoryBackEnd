@@ -1,0 +1,66 @@
+MySQL is a database management system.
+ A database is a structured collection of data
+
+
+MySQL databases are relational.
+ A relational database stores data in separate tables rather than putting all the data in one big storeroom. The database structures are organized into physical files optimized for speed.
+ 
+The SQL part of “MySQL” stands for “Structured Query Language”. SQL is the most common standardized language used to access databases.
+
+MySQL software is Open Source.
+Open Source means that it is possible for anyone to use and modify the software. Anybody can download the MySQL software from the Internet and use it without paying anything.
+
+
+ALTER
+
+Alters (modifies) an already existing Database object.
+
+CREATE
+
+Creates a new Database object such as a table.
+
+DROP
+
+Deletes completely a Database object .
+
+
+Data Manipulation:
+
+DELETE
+
+Deletes records from the Database.
+
+INSERT
+
+Creates a new record in the Database.
+
+SELECT
+
+Retrieves specific records from the Database.
+
+UPDATE
+
+Modifies specific records from the Database.
+
+Data Control (User Access Control):
+
+GRANT
+
+Grants access privileges to a user.
+
+REVOKE
+
+Removes access privileges previously granted to a user.
+
+SQL Data Types
+SQL supports a series of data types to be used with it, among which we have to choose depending on the requirements of our projects. Those are:
+
+ Numeric Data Types
+ Date and Time Data Types
+ String Data Types
+ Spatial Data Types
+ The JSON Data Type
+ 
+ In SQL, a foreign key is used to link two tables together.
+
+To achieve this, we match either a column or a combination of columns whose values to a primary key in another table.

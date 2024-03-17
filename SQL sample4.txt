@@ -1,0 +1,22 @@
+
+INSERT INTO MA_TABLE VALUES(newValueA, newValueB, newValueC,...newValueN);
+
+INSERT INTO INVENTORS (ID,NAME,AGE,BRAND,COOLNESS)
+VALUES (1, 'Elon', 45, 'SpaceX', 5001.00 );
+INSERT INTO INVENTORS (ID,NAME,AGE,BRAND,COOLNESS)
+VALUES (2, 'Steve', 66, 'TastyApple', 2001.00 );
+
+// a faster way of doing it would be:
+INSERT INTO INVENTORS
+VALUES 
+(1, 'Elon', 45, 'SpaceX', 5001.00 ),
+(2, 'Steve', 66, 'TastyApple', 2001.00 );
+
+
+
+Using the ORDER BY clause, you can sort the data selected in ascending or descending order, based on one or more columns.
+
+As you will expect, the SQL DELETE statement will delete the selected records from a table. You can also use the WHERE clause here to specify which elements to delete. If you do not, ALL the records will be deleted.
+
+The TRUNCATE statement will delete the data inside a table/database but will keep the structure of the table/database.
+

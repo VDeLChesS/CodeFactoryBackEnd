@@ -1,0 +1,19 @@
+CREATE DATABASE my_database_name DEFAULT CHARACTER SET utf8;
+
+This will create a database with the name my_database_name. The default character set is utf-8, something you might be familiar with from the Frontend Web Developer course.
+
+
+
+CREATE TABLE new_table(
+columnA datatype,
+columnB datatype,
+columnC datatype,
+..... columnN datatype,
+PRIMARY KEY( one or more columns ));
+
+This will create a table named new_table, within which we declare a number of columns along with the datatype we want them to store.
+
+The statement PRIMARY KEY is used here to assign a primary key to one or more columns (we will learn what this means and why we mostly assign it to one column in a minute).
+
+
+
